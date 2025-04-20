@@ -19,7 +19,15 @@ To setup Elsa Studio, we'll go through the following steps:
     ```bash
     dotnet new blazorwasm-empty -n "ElsaStudioBlazorWasm"
     ```
-2.  **Add Elsa Studio Packages**
+
+    {% hint style="warning" %}
+    **Deprecation warning**
+
+    The `blazorwasm-empty` template is [dicontinued since .NET 8.0](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-new-sdk-templates).
+    If you are using .NET 8.0+, you can just use `blazorwasm` instead of `blazorwasm-empty`.
+    {% endhint %}
+
+3.  **Add Elsa Studio Packages**
 
     Navigate to the root directory of your project and integrate the following Elsa Studio packages:
 
@@ -30,7 +38,7 @@ To setup Elsa Studio, we'll go through the following steps:
     dotnet add package Elsa.Studio.Login.BlazorWasm
     dotnet add package Elsa.Api.Client
     ```
-3.  **Modify Program.cs**
+4.  **Modify Program.cs**
 
     Open the `Program.cs` file and replace its existing content with the code provided below:
 
@@ -83,7 +91,7 @@ To setup Elsa Studio, we'll go through the following steps:
     // Run the application.
     await app.RunAsync();
     ```
-4.  **Remove Unnecessary Files**
+5.  **Remove Unnecessary Files**
 
     For a cleaner project structure, delete the following directories and files:
 
@@ -92,7 +100,7 @@ To setup Elsa Studio, we'll go through the following steps:
     * App.razor
     * MainLayout.razor
     * \_Imports.razor
-5.  **Generate appsettings.json**
+6.  **Generate appsettings.json**
 
     Within the `wwwroot` directory, create a new `appsettings.json` file and populate it with the following content:
 
@@ -105,7 +113,7 @@ To setup Elsa Studio, we'll go through the following steps:
         }
     }
     ```
-6.  **Update index.html**
+7.  **Update index.html**
 
     To conclude the setup, open the `index.html` file and replace its content with the code showcased below:
 
